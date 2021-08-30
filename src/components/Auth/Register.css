@@ -1,0 +1,88 @@
+.signup-container {
+  max-width: 50%;
+  height: 800px;
+  background: white;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  margin-top: 30%;
+  box-sizing: border-box;
+  border: 0.5px solid;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.signup-form {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.signup-container h1 {
+  color: rgb(0, 87, 128);
+  margin-top: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 7000;
+  font-size: 30px;
+}
+
+.registration-fieldset input[type="text"],
+[type="email"],
+[type="password"] {
+  width: 90%;
+  height: 40px;
+  border: 2px solid blue;
+  border-radius: 5px;
+  padding: 5px 5px;
+  margin-bottom: 15px;
+}
+.registration-fieldset label {
+  font-size: 18px;
+  display: block;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.registration-fieldset input[type="file"] {
+  font-size: medium;
+  width: 60%;
+  margin: 20px;
+}
+.signup_form input[type="submit"] {
+  width: 90%;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 18px;
+  background: blue;
+  color: white;
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.signup_form input[type="submit"]:hover{
+    background: grey;
+}
+
+small {
+  display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.registration-fieldset {
+  border: 0.2px solid;
+  margin:15px 15px;
+}
+.registration-legend {
+  margin: 20px;
+  
+}
+.error{
+  color:red
+}
+@media screen and (max-width: 950px) {
+  .signup-container{
+    max-width: 90%;
+  }
+}

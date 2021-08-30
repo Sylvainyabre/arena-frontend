@@ -1,0 +1,35 @@
+.module-view {
+  width: 80%;
+  box-sizing: border-box;
+  margin: auto;
+  position: relative;
+}
+.module-title-view {
+  width: 80%;
+  margin: auto;
+  font-size: 30px;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  color: #2187c2;
+  text-align: center;
+  
+}
+.module-overview-view {
+  width: 80%;
+  margin: auto;
+  font-size: 23px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #3e677a;
+  text-align: center;
+  text-justify:newspaper ;
+}
+
+.module-content {
+  width: 80%;
+  margin: auto;
+  font-size: 19px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #5f6466;
+  text-align:justify;
+  text-justify: newspaper;
+}

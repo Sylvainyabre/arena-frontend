@@ -1,0 +1,25 @@
+.footer{
+
+    height: 20px;
+    margin-top: 100vh;
+    bottom: 0;
+    justify-content: center;
+    background-color:#19456b;
+    position: sticky;;
+    padding: 4rem  1rem ;
+    width:100%;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+    
+    
+}
+
+small{
+    text-align: center;
+    justify-content: center;
+}

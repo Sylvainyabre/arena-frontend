@@ -1,0 +1,36 @@
+.course-view {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 70px;
+  display: block;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.course-top {
+  width: 80%;
+  margin: 0 auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.course-view-title {
+  width: 80%;
+  margin: auto;
+  font-size: 30px;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  color: #2187c2;
+  
+  
+}
+.course-view-overview {
+   width:80%;
+   margin: auto;
+  font-size: 23px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #3e677a;
+  
+}
+.enroll-button{
+  margin-bottom: 200px;
+}

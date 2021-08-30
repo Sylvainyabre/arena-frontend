@@ -1,0 +1,68 @@
+.card {
+  width: 45% !important;
+  height:270px;
+  box-sizing: border-box !important;
+  border: 0.5px solid lightgrey !important;
+  box-shadow: 10px 10px 5px grey !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  justify-content: space-between !important ;
+}
+.card:last-child {
+   
+  
+  margin-left:0 !important;
+  width: 45% !important;
+
+  
+ 
+}
+
+.card-text{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    text-align:justify;
+    
+}
+.card-title{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 10;
+    font-size: 20px;
+}
+
+.btn{
+    bottom: 10%;
+    position: absolute;
+}
+.module-number{
+  bottom: 10%;
+  top:10%;
+  float: left;
+}
+@media (max-width: 950px) {
+.card{
+   
+    width:85% !important;
+    margin:auto !important;
+    margin-bottom: 30px !important;
+  }
+  .card:last-child {
+   
+  
+  margin: auto !important;
+  width: 90% !important;
+
+  
+ 
+}
+.module-number{
+  bottom: 10%;
+  top:10%;
+  margin-bottom: 20px;
+  float: right;
+}
+.btn{
+    bottom: 5%;
+    position: absolute;
+}
+}

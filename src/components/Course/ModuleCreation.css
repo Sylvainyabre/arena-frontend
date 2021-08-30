@@ -1,0 +1,53 @@
+.module-creation {
+  width: 90%;
+  margin: auto;
+}
+.module-form {
+  width: 90%;
+  margin: auto;
+  margin-top: 100px;
+}
+.module-title-input {
+  display: block;
+  margin: auto;
+  padding: 20px 20px;
+  width: 90%;
+  background: rgb(226, 223, 223);
+  height: 45px;
+  margin-bottom: 15px;
+  border: 2px solid blue;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.module-overview {
+  display: block;
+  margin: auto;
+  width: 90%;
+  background: rgb(226, 223, 223);
+  min-height: 250px;
+  border: 2px solid blue;
+  border-radius: 5px;
+  padding:20px 20px;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.ck.ck-editor {
+  width: 90%;
+  margin: auto;
+ 
+}
+.ck-editor__editable {
+  height: 400px !important;
+  margin-bottom: 30px;
+  background: rgb(226, 223, 223);
+  margin: auto;
+}
+@media (max-width: 970px) {
+
+}
+.editor-label{
+    margin-top:40px;
+}

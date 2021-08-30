@@ -1,0 +1,76 @@
+.login-container{
+    position: relative;
+    max-width: 500px;
+    height: 550px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 5px grey;
+    margin:auto;
+    text-align: center;
+    margin-top: 180px;
+    border:1px solid darkgrey
+}
+
+.login-form{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.login-fieldset .email-label{
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: block;
+}
+
+ .login-fieldset .email-input{
+    width: 90%;
+    height: 35px;
+    border-radius: 8px;
+    border: 2px solid blue;
+    display: block;
+    position: relative;
+}
+
+.login-fieldset .password-label{
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+     display: block;
+     position: relative;
+    
+}
+
+.login-fieldset .password-input{
+    width: 90%;
+    height: 35px;
+    border-radius: 8px;
+    border:2px solid blue;
+    display: block;
+    position: relative;
+}
+
+.login-form .login-button{
+    width: 90%;
+    height: 35px;
+    border-radius: 15px;
+    background: blue;
+    color:white;
+    display: block;
+    position: relative;
+    margin-top:50px;
+}
+.login-form .login-button:hover{
+    background: grey;
+}
+.login-legend{
+    text-transform: uppercase;
+    color: royalblue;
+    margin:20px;
+}
+
+.error-span{
+    width:90%;
+    height:auto;
+    background:grey;
+    color:red
+}

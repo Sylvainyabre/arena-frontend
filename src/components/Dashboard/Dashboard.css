@@ -1,0 +1,137 @@
+.no-profile-page {
+  margin: auto;
+  max-width: 500px;
+}
+
+.profile-button {
+  color: white;
+  width: 100%;
+  text-decoration: none;
+  margin-left: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.profile-button > Link {
+  margin: auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.admin-course-button{
+  text-decoration: none;
+  color:white;
+  background: blue;
+  min-height: 45px !important;
+  min-width: 100px;
+  padding:10px 10px;
+  margin:auto;
+}
+.profile-creation-link {
+  width: 150px;
+  height: 30px;
+  background: blue;
+  justify-content: center;
+  margin: auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.dashboard {
+  margin: auto;
+  width: 80%;
+  background: rgb(219, 221, 224);
+  padding: 15px 10px;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+.user-course {
+  width: 95%;
+  height: 150px;
+  margin: auto;
+  background: whitesmoke;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  box-shadow: 20px 0 20px grey;
+  justify-self: center;
+  margin-bottom: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.course-button {
+  text-decoration: none;
+  background: rgba(6, 6, 218, 0.904);
+  width: 100px;
+  min-height: 35px;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-right: 20px;
+  
+}
+
+.user-course-title {
+  margin-bottom: 20px;
+}
+.edit-button {
+  background: rgb(5, 94, 129);
+  min-height: 35px;
+  width:100px ;
+  text-decoration: none;
+  color: white;
+  
+}
+.delete-button {
+  margin: auto;
+  position: absolute;
+  display: block;
+  color: red;
+  
+}
+.module-button {
+  width: 100px;
+  background: rgba(6, 6, 218, 0.904);
+  color: white;
+  min-height: 35px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 950px) {
+  .edit-button {
+    display: block;
+    margin-bottom: 15px;
+    justify-self: center;
+    float: left;
+  }
+  .user-course-title {
+    margin-bottom: 20px;
+    color: rgb(88, 130, 136);
+    font-size: 17px;
+    text-align: center;
+    text-justify: auto;
+  }
+  .user-course {
+    height: 310px;
+    
+  }
+  .course-button {
+    margin-bottom: 15px;
+    left:10%;
+  }
+  .module-button{
+    display: block;
+    margin-bottom:12px;
+    
+    
+  }
+  .delete-button{
+    display: block;
+    margin-top:40px;
+    background: rgb(9, 118, 168);
+    min-height: 35px;
+    width: 100px;
+    color:white;
+    display: block;
+
+  }
+}

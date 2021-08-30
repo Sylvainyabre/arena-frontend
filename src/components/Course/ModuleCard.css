@@ -1,0 +1,81 @@
+.module {
+  width: 80%;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  border: 5px ridge grey;
+  justify-content: center;
+ 
+
+}
+.module-description{
+  
+  position: relative;
+  margin: auto;
+  font-size: 1.2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+h5.module-title {
+ 
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-size: 19px;
+  width: 85%;
+  margin: auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 20px;
+  color: rgb(14, 102, 124);
+}
+
+.buttons {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  display: inline-flex;
+  justify-content: space-between;
+  
+  
+}
+
+.module-read-button {
+
+  min-width: 50px;
+  height: 30px;
+  background: blue;
+  color: white;
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+ 
+  
+}
+.module-edit-button {
+  position: relative;
+  min-width: 50px;
+  height: 30px;
+  background: blue;
+  color: white;
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+  
+ 
+}
+.module-delete-button{
+  height: 40px;
+  text-decoration: none;
+  color:red;
+  background: white;
+
+}
+@media (max-width: 950px){
+
+.buttons{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 12px;
+}
+}
