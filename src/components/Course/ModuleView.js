@@ -6,15 +6,15 @@ import {
   fetchAllCourses,
   setCourses,
 } from "../../stateManagement/reducers/Course/courseSlice";
-import parse from "html-react-parser";
 import { useLocation } from "react-router-dom";
-
+const HtmlToReactParser = require("html-to-react").Parser;
+const htmlToReactParser = new HtmlToReactParser();
 const ModuleView = () => {
   const dispatch = useDispatch();
   const location = useLocation();
 
   const courses = useSelector((state) => state.course.courses);
-  console.log(courses);
+ 
   useEffect(() => {
     if (courses.length > 0) {
       return;
@@ -25,6 +25,8 @@ const ModuleView = () => {
   
  
   const module = location.state;
+  const result = htmlToReactParser.parse(module.body);
+ 
  
 
   return (
@@ -33,7 +35,7 @@ const ModuleView = () => {
       <hr />
       <p className="module-overview-view">{module.overview}</p>
       <hr/>
-      <div className="module-content">{parse(module.body)}</div>
+      <div className="module-content">{result}</div>
     </div>
   );
 };

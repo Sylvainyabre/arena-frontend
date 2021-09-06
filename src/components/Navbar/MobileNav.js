@@ -78,7 +78,7 @@ const MobileNav = () => {
         </li>
         {isEmpty(authUser) && (
           <li className="mobile-link-item">
-            <Link to="/register" className="mobile-link">
+            <Link to="/register" className="mobile-link" onClick={() => setOpen(!open)}>
               Register
             </Link>
           </li>

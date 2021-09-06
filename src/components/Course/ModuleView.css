@@ -12,7 +12,6 @@
   text-transform: uppercase;
   color: #2187c2;
   text-align: center;
-  
 }
 .module-overview-view {
   width: 80%;
@@ -21,7 +20,7 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #3e677a;
   text-align: center;
-  text-justify:newspaper ;
+  text-justify: newspaper;
 }
 
 .module-content {
@@ -30,6 +29,20 @@
   font-size: 19px;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #5f6466;
-  text-align:justify;
-  text-justify: newspaper;
+  display: flex;
+  flex-direction: column;
+}
+.module-content > figure>img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: flex;
+  margin: auto;
+  position: relative;
+
+}
+.raw-html-embed>iframe{
+  max-height: 400px;
+  max-width: 100%;
+  margin:auto;
 }
