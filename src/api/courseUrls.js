@@ -9,7 +9,10 @@ export const courseDropUrl = (courseId) =>
   `/pi/courses/course/drop/${courseId}`; //POST
 export const moduleCreationUrl = (courseId) =>
   `api/courses/modules/new/${courseId}`; //POST
-export const moduleUpdateUrl = (courseId, moduleId) =>
-  `/api/courses/modules/update/${courseId}/${moduleId}`;
+export const moduleUpdateUrl = (moduleId) =>
+  `/api/modules/update/${moduleId}`;//PUT
+  
   export const moduleDeleteUrl = (courseId, moduleId) =>
   `/api/courses/modules/delete/${courseId}/${moduleId}`;
+  export const fileUploadUrl = "https://brain-arena.herokuapp.com/api/modules/upload";
+  //https://brain-arena.herokuapp.com

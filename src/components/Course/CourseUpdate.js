@@ -26,6 +26,7 @@ function CourseUpdate() {
       courseId: courseId,
       title: courseTitle,
       overview: courseOverview,
+      
     };
     dispatch(updateCourse(data)).then((res) => {
       if (res.payload.hasOwnProperty("title")) {

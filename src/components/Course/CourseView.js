@@ -2,9 +2,6 @@ import React from "react";
 import ModuleCard from "./ModuleCard";
 import { useSelector, useDispatch } from "react-redux";
 import "./CourseView.css";
-
-import { left } from "@popperjs/core";
-
 import { useLocation } from "react-router-dom";
 import { enroll } from "../../stateManagement/reducers/Course/courseSlice";
 import { toast } from "react-toastify";
@@ -17,7 +14,9 @@ const CourseView = () => {
   const user = useSelector((state) => state.login.user);
 
   const isEnrolled = (user, courseId) => {
-    if (!user.enrollments.length > 0) {
+    if (!user ||!user.enrollments ) {
+      return false;
+    } else if (!user.enrollments.length > 0) {
       return false;
     } //check if user is enrolled
     else if (user.enrollments.indexOf(courseId) === -1) {
@@ -33,12 +32,11 @@ const CourseView = () => {
     const confirmEnrollment = window.confirm("Enroll in this Course ?");
     if (confirmEnrollment) {
       dispatch(enroll(course._id)).then((res) => {
-       if(res.payload.hasOwnProperty("email")){ 
-         //payload should return user on success which has a property email
-         toast.success("Enrolled successfully ")
-         isOwner = true
-
-       }
+        if (res.payload.hasOwnProperty("email")) {
+          //payload should return user on success which has a property email
+          toast.success("Enrolled successfully ");
+          isOwner = true;
+        }
       });
     }
   };

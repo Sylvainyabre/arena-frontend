@@ -3,10 +3,9 @@ import "./Home.css";
 import CourseCard from "../Course/CourseCard";
 import { fetchAllCourses } from "../../stateManagement/reducers/Course/courseSlice";
 import { useDispatch, useSelector } from "react-redux";
-
+import Spinner from "react-bootstrap/Spinner";
 
 function Home() {
-
   const dispatch = useDispatch();
   let courses = useSelector((state) => state.course.courses);
   const isLoading = useSelector((state) => state.course.isLoading);
@@ -14,13 +13,9 @@ function Home() {
     if (courses.length > 0) {
       return;
     } else {
-      dispatch(fetchAllCourses())
-      
+      dispatch(fetchAllCourses());
     }
-  },[courses,dispatch]);
-  
-
-
+  }, [courses, dispatch]);
 
   const cards = courses.map((course) => (
     <CourseCard course={course} key={course.createdAt} />
@@ -28,9 +23,10 @@ function Home() {
 
   return (
     <div className="home">
-     
       {isLoading ? (
-        <h4 className="courses-loading">Loading...</h4>
+        <Spinner animation="border" role="status" className="courses-loading mx-auto">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
       ) : (
         <div className="container cards-container">{cards}</div>
       )}

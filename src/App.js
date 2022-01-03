@@ -29,6 +29,9 @@ import "react-toastify/dist/ReactToastify.css";
 import CourseView from "./components/Course/CourseView";
 import ModuleUpdate from "./components/Course/ModuleUpdate";
 import ModuleView from "./components/Course/ModuleView";
+import "./utils/prism.css";
+import "./index.css";
+import About from "./components/About/About";
 
 import { fetchAllCourses } from "./stateManagement/reducers/Course/courseSlice";
 
@@ -107,6 +110,7 @@ function App() {
           <Route path="/profile_create" component={CreateProfile} />
           <Route path="/password/requested" component={passwordRequested} />
           <Route path="/profile/:profileId" component={Dashboard} />
+          <Route path="/about" component={About}/>
 
           <Route
             path="/password/reset"

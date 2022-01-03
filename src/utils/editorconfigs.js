@@ -6,7 +6,6 @@ export const toolbar = [
 	"Bold",
 	"CloudServices",
 	"Code",
-	"CodeBlock",
 	"Essentials",
 	"FontBackgroundColor",
 	"FontColor",
@@ -27,7 +26,7 @@ export const toolbar = [
 	"List",
 	"MediaEmbed",
 	"MediaEmbedToolbar",
-	
+	"codeBlock",
 	"PasteFromOffice",
 	"SourceEditing",
 	"Strikethrough",

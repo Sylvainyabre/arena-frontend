@@ -18,6 +18,6 @@ export const RegisterUser = async (data) => {
   try {
     await API.post(registrationUrl, data);
   } catch (err) {
-     
+     console.log(err.message);
   }
 };

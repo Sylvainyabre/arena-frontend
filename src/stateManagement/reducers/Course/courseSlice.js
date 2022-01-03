@@ -82,7 +82,7 @@ export const dropCourse = createAsyncThunk(
   "courses/dropCourse",
   async (courseId, { dispatch }) => {
     try {
-      const res = API.post(courseDropUrl(courseId));
+      const res = await API.post(courseDropUrl(courseId));
 
       return res;
     } catch (error) {
@@ -123,9 +123,9 @@ export const addModule = createAsyncThunk(
 //update a module
 export const updateModule = createAsyncThunk(
   "courses/updateModule",
-  async ({ courseId, moduleId, title, overview, body }, { dispatch }) => {
+  async ({moduleId, title, overview, body }, { dispatch }) => {
     try {
-      const res = await API.put(moduleUpdateUrl(courseId, moduleId), {
+      const res = await API.put(moduleUpdateUrl(moduleId), {
         title,
         overview,
         body,
@@ -225,6 +225,14 @@ export const courseSlice = createSlice({
       //state.isLoading = true;
       return { ...state, isLoading: true };
     },
+    [updateModule.rejected]: (state,{payload}) => {
+      //state.isLoading = true;
+      return { ...state, errors:payload,isLoading:false };
+    },
+    [updateModule.fulfilled]: (state) => {
+      //state.isLoading = true;
+      return { ...state, isLoading: false };
+    },
     //updateModule
     [updateCourse.fulfilled]: (state) => {
       //state.isLoading = false;
@@ -236,7 +244,7 @@ export const courseSlice = createSlice({
     },
     [updateCourse.rejected]: (state, { payload }) => {
       //state.isLoading = false;
-      return { ...state, isLoading: false };
+      return { ...state,errors:payload, isLoading: false };
     },
     //deleModule
     [deleteModule.fulfilled]: (state) => {
@@ -261,9 +269,9 @@ export const courseSlice = createSlice({
       //state.isLoading = true;
       return { ...state, isLoading: true };
     },
-    [fetchCourse.rejected]: (state) => {
+    [fetchCourse.rejected]: (state,{payload}) => {
       //state.isLoading = false;
-      return { ...state, isLoading: false };
+      return { ...state, errors:payload,isLoading: false };
     },
   },
 });

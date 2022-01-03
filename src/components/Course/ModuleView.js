@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./ModuleView.css";
 import { useDispatch, useSelector } from "react-redux";
+import Prism from "prismjs"
 
 import {
   fetchAllCourses,
@@ -23,7 +24,9 @@ const ModuleView = () => {
     }
   }, [courses, dispatch]);
   
- 
+ useEffect(()=>{
+   Prism.highlightAll();
+ })
   const module = location.state;
   const result = htmlToReactParser.parse(module.body);
  
