@@ -57,38 +57,29 @@ export const profileSlice = createSlice({
   initialState,
   reducers: {
     get_errors: (state, { payload }) => {
-      //state.errors = payload;
       return { ...state, errors: payload };
     },
     set_profile: (state, { payload }) => {
-      //state.profile = payload
       return { ...state, profile: payload };
     },
     clear_profile: (state) => {
-      //state.profile = null
       return { ...state, profile: null };
     },
   },
   extraReducers: {
     [createProfile.pending]: (state) => {
-      //state.isLoading = true
-      return { ...state, siLoading: true };
+      return { ...state, isLoading: true };
     },
     [createProfile.rejected]: (state) => {
-      //state.isCreated = false
-      //state.isLoading = false
       return { ...state, isLoading: false, isCreated: false };
     },
     [createProfile.fulfilled]: (state) => {
-      //state.isLoading = false
       return { ...state, isLoading: false };
     },
     [getCurrentProfile.pending]: (state) => {
-      // state.isLoading = true
       return { ...state, isLoading: true };
     },
     [getCurrentProfile.rejected]: (state) => {
-      //state.isLoading = false
       return { ...state, isLoading: false };
     },
     [getCurrentProfile.fulfilled]: (state) => {

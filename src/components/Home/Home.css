@@ -4,10 +4,33 @@
     box-sizing: border-box;
     min-height: 100%;
     top:60%;
+    width: 76%;
+    margin: auto;
     
 }
-
-
+/* .cards {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+  margin: auto;
+  justify-self: center;
+}
+.card{
+  margin-bottom: 15px;
+} */
+/* .cards {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+  margin: auto;
+  justify-self: center;
+}
 .cards-container{
     position: relative;
     display: flex;
@@ -15,11 +38,12 @@
     flex-wrap: wrap;
    
     
-}
+} */
+
 .courses-loading{
     margin:auto !important;
-    left: auto !important;
-    right: auto !important;
+    /* left: 45% !important;
+    right: 45% !important; */
 }
 
 @media (max-width: 950px) {

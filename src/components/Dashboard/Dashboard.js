@@ -14,12 +14,9 @@ function Dashboard() {
 
   useEffect(() => {
     dispatch(getCurrentProfile());
-    if (courses.length > 0) {
-      return;
-    } else {
-      dispatch(fetchAllCourses());
-    }
-  }, [dispatch, courses]);
+
+    dispatch(fetchAllCourses());
+  },[]);
   const user = useSelector((state) => state.login.user);
 
   let dashboardContent;

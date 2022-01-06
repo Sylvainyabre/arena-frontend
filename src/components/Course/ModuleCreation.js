@@ -17,7 +17,7 @@ function ModuleCreation() {
   const history = useHistory();
   const [moduleTitle, setModuleTitle] = useState("");
   const [moduleOverview, setModuleOverview] = useState("");
-  const [moduleBody, setModuleBody] = useState("");
+  //const [moduleBody, setModuleBody] = useState("");
   const isLoading = useSelector((state) => state.course.isLoading);
   const errors = useSelector((state) => state.course.errors);
   const { courseId } = useParams();

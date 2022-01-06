@@ -41,7 +41,6 @@ function ModuleUpdate() {
     dispatch(
       updateModule(updatedModule)
     ).then((res) => {
-     console.log(res)
       if (res.payload) {
         if (res.payload.hasOwnProperty("title")) {
           toast.success("Module updated successfully !", { autoClose: 5000 });

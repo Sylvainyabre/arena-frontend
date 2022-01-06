@@ -5,6 +5,9 @@ import "./CourseView.css";
 import { useLocation } from "react-router-dom";
 import { enroll } from "../../stateManagement/reducers/Course/courseSlice";
 import { toast } from "react-toastify";
+import CourseModules from "./CourseModules";
+import { Spinner } from "react-bootstrap";
+import { Button } from "@mui/material";
 
 const CourseView = () => {
   const dispatch = useDispatch();
@@ -14,7 +17,7 @@ const CourseView = () => {
   const user = useSelector((state) => state.login.user);
 
   const isEnrolled = (user, courseId) => {
-    if (!user ||!user.enrollments ) {
+    if (!user || !user.enrollments) {
       return false;
     } else if (!user.enrollments.length > 0) {
       return false;
@@ -41,39 +44,38 @@ const CourseView = () => {
     }
   };
 
-  const modulesDisplay =
-    course.modules.length > 0 ? (
-      course.modules.map((mod) => (
-        <ModuleCard key={mod._id} module={mod} course={course} user={user} />
-      ))
-    ) : (
-      <h5>No modules for this course.</h5>
-    );
+  // const modulesDisplay =
+  //   course.modules.length > 0 ? (
+  //     course.modules.map((mod) => <PermanentDrawerRight course={course} />)
+  //   ) : (
+  //     <h5>No modules for this course.</h5>
+  //   );
 
   return (
     <>
       {isLoading ? (
-        <h3>Loading...</h3>
+        <Spinner
+          animation="border"
+          role="status"
+          className="courses-loading mx-auto"
+        >
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
       ) : (
         <div className="course-view container-fluid">
           <div className="section container course-top">
+            
             <h3 className="course-view-title">{course.title}</h3>
             <hr />
 
             <p className="course-view-overview">{course.overview}</p>
+            
             <hr />
+            <h2>Course modules</h2>
+            <CourseModules course ={course}/>
           </div>
           <div className="course-modules"></div>
-          {isEnrolled(user, course._id) || isOwner ? (
-            modulesDisplay
-          ) : (
-            <button
-              onClick={handleEnrollment}
-              className="btn btn-secondary btn-lg enroll-button"
-            >
-              Enroll
-            </button>
-          )}
+
         </div>
       )}
     </>

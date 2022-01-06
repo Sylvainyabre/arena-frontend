@@ -51,10 +51,10 @@ if (token) {
   }
 }
 let courses = store.getState().course.courses;
-if (!courses) {
-  console.log("courses empty, fetching...");
-  store.dispatch(fetchAllCourses());
-}
+// if (!courses) {
+//   console.log("courses empty, fetching...");
+//   store.dispatch(fetchAllCourses());
+// }
 function App() {
   
 

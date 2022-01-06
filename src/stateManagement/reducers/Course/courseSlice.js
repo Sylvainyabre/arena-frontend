@@ -25,9 +25,14 @@ const initialState = {
 //create a new course with owner, title and overview
 export const createCourse = createAsyncThunk(
   "courses/createCourse",
-  async ({ title, overview, owner }, { dispatch }) => {
+  async ({ title, imageURL, overview}, { dispatch }) => {
+    console.log(title, imageURL);
     try {
-      const res = await API.post(courseCreationUrl, { title, overview, owner });
+      const res = await API.post(courseCreationUrl, {
+        title,
+        imageURL,
+        overview
+      });
       await dispatch(setCourse(res.data));
       return res.data;
     } catch (err) {
@@ -42,7 +47,7 @@ export const deleteCourse = createAsyncThunk(
   async (courseId, { dispatch }) => {
     try {
       const res = await API.delete(courseDeleteUrl(courseId));
-      
+
       return res.data;
     } catch (err) {
       return dispatch(get_errors(err.response.data));
@@ -123,7 +128,7 @@ export const addModule = createAsyncThunk(
 //update a module
 export const updateModule = createAsyncThunk(
   "courses/updateModule",
-  async ({moduleId, title, overview, body }, { dispatch }) => {
+  async ({ moduleId, title, overview, body }, { dispatch }) => {
     try {
       const res = await API.put(moduleUpdateUrl(moduleId), {
         title,
@@ -168,14 +173,12 @@ export const courseSlice = createSlice({
   initialState,
   reducers: {
     get_errors: (state, { payload }) => {
-      //state.errors = payload;
       return { ...state, errors: payload };
     },
     setCourse: (state, { payload }) => {
       return { ...state, course: payload };
     },
     setCourses: (state, { payload }) => {
-      //state.courses = payload;
       return { ...state, courses: payload };
     },
   },
@@ -225,9 +228,9 @@ export const courseSlice = createSlice({
       //state.isLoading = true;
       return { ...state, isLoading: true };
     },
-    [updateModule.rejected]: (state,{payload}) => {
+    [updateModule.rejected]: (state, { payload }) => {
       //state.isLoading = true;
-      return { ...state, errors:payload,isLoading:false };
+      return { ...state, errors: payload, isLoading: false };
     },
     [updateModule.fulfilled]: (state) => {
       //state.isLoading = true;
@@ -244,34 +247,27 @@ export const courseSlice = createSlice({
     },
     [updateCourse.rejected]: (state, { payload }) => {
       //state.isLoading = false;
-      return { ...state,errors:payload, isLoading: false };
+      return { ...state, errors: payload, isLoading: false };
     },
     //deleModule
     [deleteModule.fulfilled]: (state) => {
-      //state.isLoading = false;
       return { ...state, isLoading: false };
     },
     [deleteModule.pending]: (state) => {
-      //state.isLoading = true;
       return { ...state, isLoading: true };
     },
     [deleteModule.rejected]: (state, { payload }) => {
-      //state.errors = payload;
-      //state.isLoading = false;
       return { ...state, errors: payload, isLoading: false };
     },
     //fetchCourse
     [fetchCourse.fulfilled]: (state) => {
-      //state.isLoading = false;
       return { ...state, isLoading: false };
     },
     [fetchCourse.pending]: (state) => {
-      //state.isLoading = true;
       return { ...state, isLoading: true };
     },
-    [fetchCourse.rejected]: (state,{payload}) => {
-      //state.isLoading = false;
-      return { ...state, errors:payload,isLoading: false };
+    [fetchCourse.rejected]: (state, { payload }) => {
+      return { ...state, errors: payload, isLoading: false };
     },
   },
 });
