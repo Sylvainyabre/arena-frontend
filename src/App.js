@@ -32,6 +32,7 @@ import ModuleView from "./components/Course/ModuleView";
 import "./utils/prism.css";
 import "./index.css";
 import About from "./components/About/About";
+//import "tailwindcss/defaultTheme"
 
 import { fetchAllCourses } from "./stateManagement/reducers/Course/courseSlice";
 
