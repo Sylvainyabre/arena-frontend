@@ -11,9 +11,9 @@ function CourseUpdate() {
   const { courseId } = useParams();
 
   const history = useHistory();
-  const courseState = useSelector((state) => state.course);
-  const courses = courseState.courses;
-  const course = courses.find((c) => c._id === courseId);
+  let courseState = useSelector((state) => state.course);
+  let courses = courseState.courses;
+  let course = courses.find((c) => c._id === courseId);
   const [courseTitle, setCourseTitle] = useState(course.title);
   const [courseOverview, setCourseOverview] = useState(course.overview);
   // const loginState = useSelector((state) => state.login);

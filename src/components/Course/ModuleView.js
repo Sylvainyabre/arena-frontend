@@ -8,13 +8,13 @@ import {
   setCourses,
 } from "../../stateManagement/reducers/Course/courseSlice";
 import { useLocation } from "react-router-dom";
-const HtmlToReactParser = require("html-to-react").Parser;
+const HtmlToReactParser = require("html-to-react").Parser; 
 const htmlToReactParser = new HtmlToReactParser();
 const ModuleView = () => {
   const dispatch = useDispatch();
   const location = useLocation();
 
-  const courses = useSelector((state) => state.course.courses);
+  let courses = useSelector((state) => state.course.courses);
  
   useEffect(() => {
     if (courses.length > 0) {
@@ -26,7 +26,7 @@ const ModuleView = () => {
   
  useEffect(()=>{
    Prism.highlightAll();
- })
+ });
   const module = location.state;
   const result = htmlToReactParser.parse(module.body);
  
@@ -35,7 +35,7 @@ const ModuleView = () => {
   return (
     <div className="module-view">
       <h2 className="module-title-view">{module.title}</h2>
-      <hr />
+      <hr/>
       <p className="module-overview-view">{module.overview}</p>
       <hr/>
       <div className="module-content">{result}</div>

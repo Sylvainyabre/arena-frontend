@@ -1,5 +1,4 @@
 import React from "react";
-import ModuleCard from "./ModuleCard";
 import { useSelector, useDispatch } from "react-redux";
 import "./CourseView.css";
 import { useLocation } from "react-router-dom";
@@ -7,14 +6,14 @@ import { enroll } from "../../stateManagement/reducers/Course/courseSlice";
 import { toast } from "react-toastify";
 import CourseModules from "./CourseModules";
 import { Spinner } from "react-bootstrap";
-import { Button } from "@mui/material";
+
 
 const CourseView = () => {
   const dispatch = useDispatch();
   const location = useLocation();
-  const course = location.state;
+  let course = location.state;
   let isLoading = useSelector((state) => state.course.isLoading);
-  const user = useSelector((state) => state.login.user);
+  let user = useSelector((state) => state.login.user);
 
   const isEnrolled = (user, courseId) => {
     if (!user || !user.enrollments) {
